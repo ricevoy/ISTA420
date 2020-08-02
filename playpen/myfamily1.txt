@@ -1,0 +1,10 @@
+.headers on
+
+--Name: myfamily.sql
+--Author: Rawlston Morton
+--Date: July 2, 2020
+
+drop table if exists myfamily;
+
+
+

@@ -1,0 +1,57 @@
+.headers on
+
+--Name: myfamily.sql
+--Author: Rawlston Morton
+--Date: July 2, 2020
+
+--drop table if exists family;
+
+create table family (
+id int,
+name text,
+sex integer,
+role text,
+age integer
+);
+
+insert into family values (1,"Rawlston",1,"Child",22);
+insert into family values (2,"Cole",1,"Child",17);
+insert into family values (3,"Alex",1,"Child",14);
+insert into family values (4, "Alyssa",0,"Child",11);
+insert into family values (5, "Raquel",0, "Parent",42);
+
+
+select * from family;
+id|name|sex|role|age
+1|Rawlston|1|Child|22
+2|Cole|1|Child|17
+3|Alex|1|Child|14
+4|Alyssa|0|Child|11
+5|Raquel|0|Parent|42
+select * from family where sex = 1;
+id|name|sex|role|age
+1|Rawlston|1|Child|22
+2|Cole|1|Child|17
+3|Alex|1|Child|14
+select * from family where role like "Parent";
+id|name|sex|role|age
+5|Raquel|0|Parent|42
+select * from family where role like "Child";
+id|name|sex|role|age
+1|Rawlston|1|Child|22
+2|Cole|1|Child|17
+3|Alex|1|Child|14
+4|Alyssa|0|Child|11
+select name from family;
+name
+Rawlston
+Cole
+Alex
+Alyssa
+Raquel
+select avg(age) from family;
+avg(age)
+21.2
+select sum(age) from family;
+sum(age)
+106
